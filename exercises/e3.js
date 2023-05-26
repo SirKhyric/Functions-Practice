@@ -15,10 +15,17 @@
  */
 
 // Your code goes here...
-
-
-
-
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+  if (!arr.length) return false;
+  for (let elem of arr) {
+    if (elem > val1 && elem < val2) {
+      return true;
+    } 
+  }
+  return false;
+}
+console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 3, 5));
+console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 5, 10));
 /**
  * ====================================================
  * Please read the /exercises-info/e4.md file. It describes different types of syntax to write functions
@@ -35,10 +42,35 @@
  */
 
 // Your code goes here...
+function getValueWithConditionOne(number1, number2) {
+  if (number1 === 40 && number2 === 40) {
+    return number1 + number2;
+  } else {
+    return (2 * (number1) + 2 * (number2));
+  }
+}
+console.log(getValueWithConditionOne(40, 40));
+console.log(getValueWithConditionOne(20, 30));
 
+var getValueWithConditionTwo = (number1, number2) => {
+  if (number1 === 40 && number2 === 40) {
+    return number1 + number2;
+  } else {
+    return (2 * (number1) + 2 * (number2));
+  }
+}
+console.log(getValueWithConditionTwo(40, 40));
+console.log(getValueWithConditionTwo(20, 30));
 
-
-
+var getValueWithConditionThree = function (number1, number2) {
+  if (number1 === 40 && number2 === 40) {
+    return number1 + number2;
+  } else {
+    return (2 * (number1) + 2 * (number2));
+  }
+}
+console.log(getValueWithConditionThree(40, 40));
+console.log(getValueWithConditionThree(20, 30));
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
 // If the test has all tests passed, switch to the next exercise file
